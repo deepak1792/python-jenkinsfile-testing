@@ -4,7 +4,7 @@
  * Jenkinsfile
  */
 pipeline {
-    agent any
+    agent { docker { image 'python:2.7' } }
     options {
         buildDiscarder(
             // Only keep the 10 most recent builds
@@ -18,14 +18,6 @@ pipeline {
     }
 
     stages {
-
-        /*
-        stage ('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-        */
 
         stage ('Install_Requirements') {
             steps {
