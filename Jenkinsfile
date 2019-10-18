@@ -12,8 +12,6 @@ pipeline {
     }
     environment {
         projectName = 'ProjectTemplate'
-        emailTo = 'jere@arista.com'
-        emailFrom = 'eosplus-dev+jenkins@arista.com'
         VIRTUAL_ENV = "${env.WORKSPACE}/venv"
     }
 
